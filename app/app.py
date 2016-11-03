@@ -1,20 +1,20 @@
-import datetime, functools, re, urllib
+from __future__ import absolute_import
 
 from flask import (
     Flask,
     abort,
-    flash,
-    Markup,
     redirect,
     render_template,
     request,
-    Response,
     session,
     url_for
 )
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object("config")
+
+db = SQLAlchemy(app)
 
 @app.route("/")
 def home():
