@@ -22,7 +22,7 @@ setup(
     author="Richard Shen",
     author_email="rich.shen@nyu.edu",
     description="blog made with flask, SQLAlchemy, and SQLite",
-    long_description=read("README.md"),
+    long_description=read("README.rst"),
     packages=find_packages(exclude=["ez_setup"]),
     include_package_data=True,
     zip_safe=False,

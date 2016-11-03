@@ -10,7 +10,7 @@ Requirements:
 Running:
 --------
 
-    $ ./tools/runserver.py
+    $ python /tools/runserver.py
 
 Unit tests:
 -----------
