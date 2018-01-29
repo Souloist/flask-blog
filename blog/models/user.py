@@ -3,6 +3,7 @@ from __future__ import absolute_import
 from sqlalchemy import Column, Integer, String
 from blog.models.meta import Base
 
+
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)

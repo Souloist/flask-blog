@@ -20,13 +20,16 @@ app = Flask(
 
 app.config.from_object("blog.config")
 
+
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     meta.session.remove()
 
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 @app.route("/signup", methods=["POST"])
 def signup():
@@ -34,6 +37,7 @@ def signup():
     meta.session.add(user)
     meta.session.commit()
     return redirect(url_for("message", username=user.username))
+
 
 @app.route("/message/<username>")
 def message(username):
